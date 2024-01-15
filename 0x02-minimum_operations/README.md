@@ -1,4 +1,4 @@
-# Min Operations Readme
+# Min Operations
 
 ## Problem Description
 
