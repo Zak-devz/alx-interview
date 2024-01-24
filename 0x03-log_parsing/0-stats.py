@@ -44,7 +44,7 @@ def print_all(stat):
     stat = OrderedDict(stat)
 
     for key, value in stat.items():
-        if value is not 0:
+        if value != 0:
             print("{}: {}".format(key, value))
 
 
@@ -58,7 +58,7 @@ if __name__ == "__main__":
         for lines in sys.stdin:
             file_size += search_items(lines, status)
 
-            if i is not 0 and i % 9 == 0:
+            if i != 0 and i % 9 == 0:
                 print("File size: {:d}".format(file_size))
                 print_all(status)
 
