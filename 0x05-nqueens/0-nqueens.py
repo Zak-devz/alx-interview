@@ -21,7 +21,7 @@ def place_queen(q, column, prev_solver):
 
 def is_safe(q, x, array):
     if x in array:
-        return (False)
+        return False
     else:
         return all(abs(array[column] - x) != q - column
                    for column in range(q))
@@ -39,11 +39,10 @@ def init():
     if the_queen < 4:
         print("N must be at least 4")
         sys.exit(1)
-    return(the_queen)
+    return the_queen
 
 
 def n_queens():
-
     the_queen = init()
     solver = solve(the_queen, the_queen)
     for array in solver:
