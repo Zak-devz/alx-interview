@@ -2,7 +2,7 @@
 """Module defining isWinner function."""
 
 
-def isWinner(x, nums):
+def isWinner(x: int, nums: list) -> str:
     """Function to get who has won in prime game"""
     mariaWinsCount = 0
     benWinsCount = 0
@@ -41,7 +41,7 @@ def isWinner(x, nums):
     return None
 
 
-def is_prime(n):
+def is_prime(n: int) -> bool:
     """Returns True if n is prime, else False."""
     if n < 2:
         return False
@@ -51,7 +51,7 @@ def is_prime(n):
     return True
 
 
-def primes_in_range(start, end):
+def primes_in_range(start: int, end: int) -> list:
     """Returns a list of prime numbers between start and end (inclusive)."""
     primes = [n for n in range(start, end+1) if is_prime(n)]
     return primes
